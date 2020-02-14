@@ -2,6 +2,30 @@ console.log('tempConverter script has loaded');
 
 // write this function!
 function tempConverter(temperature, degrees) {
+  userDegrees = degrees.toString();
+  if (userDegrees === "f") {
+    return (temperature * 9/5) + 32;
+  }
+  else if (userDegrees === "c") {
+    return (temperature - 32) * 5/9;
+  }
+  else {
+    return userDegrees+" not supportd";
+  }
+ 
+  /*
+  switch (true) {
+    case(userDegrees === 'f'):
+      return (temperature * 9/5) + 32;
+      break;
+    case(userDegrees === 'c'):
+      return (temperature - 32) * 5/9;
+      break;
+    default:
+      return "please enter valid";
+      break;
+
+  }*/
 }
 
 // if the user wants to convert to farenheit
@@ -28,11 +52,13 @@ function tempConverterHandler() {
 
   console.assert(typeof userDegrees === 'number', "don't forget to cast userDegrees to a string!");
 
-  // perform core logic
+ // perform core logic
   // write this line!
+  const result = tempConverter(userTempStr, userDegrees);
 
   // alert result for the user
   // write this line!
+  alert(result);
 
   // log action for the developer
   console.log('\n--- tempConverter ---');
