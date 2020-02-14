@@ -42,9 +42,11 @@ function padLeftHandler() {
 
   // perform core logic
   // write this line!
+ const result = padLeft(userString, userLengthStr);
 
   // alert result for the user
   // write this line!
+ alert(result);
 
   // log action for the developer
   console.log('\n--- padLeft ---');
