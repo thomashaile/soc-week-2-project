@@ -2,6 +2,22 @@ console.log('padLefts script has loaded');
 
 // write this function!
 function padLeft(string, length) {
+ userLength = Number(length);
+  /* if (string.length >= userLength) {
+    return string;
+  } else {
+    //return "it is shortest";
+    var padded = ("-------" + string).substr(-userLength);
+    return padded;
+  }*/
+  if (string.length >= userLength) {
+    return string;
+  } else {
+    string = string.toString();
+    var char = "-";
+    var pad = Array(userLength - (string.length-1)).join(char);
+    return pad + string;
+  }
 }
 
 // if the string is already as long as or longer than the length
