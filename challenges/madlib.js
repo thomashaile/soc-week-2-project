@@ -1,9 +1,90 @@
 console.log('madlib script has loaded');
 
 // write this function!
-function madlib() {
+  function madlib(userNoun, userVerb, userAdj) {
+  var theSentence;
 
+  // working using the switch case statment
+  switch (true) {
+    case userNoun.length < userVerb.length:
+      theSentence =
+        "When The" +
+        " " +
+        userAdj +
+        " " +
+        "rain falls," +
+        " " +
+        userNoun +
+        " " +
+        "begins to" +
+        " " +
+        userVerb;
+      return theSentence;
+
+      break;
+
+    case userNoun.length > userVerb.length:
+      theSentence =
+        "The" +
+        " " +
+        userAdj +
+        " " +
+        userNoun +
+        " " +
+        "loves to" +
+        " " +
+        userVerb +
+        " " +
+        " in the summer";
+
+      return theSentence;
+
+      break;
+
+    default:
+      theSentence = "So Sorry, both your noun and verb have the same length ";
+      return theSentence;
+  }
+
+  /*
+
+  //working using if statment 
+  
+  if (userNoun.length > userVerb.length) {
+    theSentence =
+      "The" +
+      " " +
+      userAdj +
+      " " +
+      userNoun +
+      " " +
+      "loves to" +
+      " " +
+      userVerb +
+      " " +
+      " in the summer";
+
+    return theSentence;
+  } else if (userNoun.length < userVerb.length) {
+    theSentence =
+      "When The" +
+      " " +
+      userAdj +
+      " " +
+      "rain falls," +
+      " " +
+      userNoun +
+      " " +
+      "begins to" +
+      " " +
+      userVerb;
+    return theSentence;
+  } else {
+    theSentence = "Sorry, both your noun and verb have the same length ";
+    return theSentence;
+  }*/
 }
+
 
 // if the noun is longer than the verb
 console.assert(madlib('horse', 'walk', 'red') === 'the red horse loves to walk in the summer', 'first');
